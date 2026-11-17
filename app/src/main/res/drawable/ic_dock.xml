@@ -1,0 +1,29 @@
+<!--
+  ~ INK OMRON Viewer - Monitorización y control de muelles de carga.
+  ~ Copyright (C) 2026 X. Rodriguez <xarosu@gmail.com>
+  ~
+  ~ Este programa es software libre: puedes redistribuirlo y/o modificarlo
+  ~ bajo los términos de la Licencia Pública General GNU publicada por la
+  ~ Free Software Foundation, ya sea la versión 3 de la Licencia, o
+  ~ cualquier versión posterior.
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil, pero
+  ~ SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de
+  ~ MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO DETERMINADO.
+  ~ Consulte la Licencia Pública General GNU para más detalles.
+  ~
+  ~ Debería haber recibido una copia de la Licencia Pública General GNU
+  ~ junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+  <path
+      android:fillColor="@android:color/white"
+      android:pathData="M20,8L20,5L4,5v3L2,8v6h2v5h16v-5h2L22,8h-2zM18,17h-4v-4h4v4zM18,9h-4L14,6h4v3zM6,6h4v3L6,9L6,6zM6,13h4v4L6,17v-4z"/>
+</vector>

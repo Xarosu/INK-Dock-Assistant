@@ -1,0 +1,372 @@
+<!--
+  ~ INK OMRON Viewer - Monitorización y control de muelles de carga.
+  ~ Copyright (C) 2026 X. Rodriguez <xarosu@gmail.com>
+  ~
+  ~ Este programa es software libre: puedes redistribuirlo y/o modificarlo
+  ~ bajo los términos de la Licencia Pública General GNU publicada por la
+  ~ Free Software Foundation, ya sea la versión 3 de la Licencia, o
+  ~ cualquier versión posterior.
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil, pero
+  ~ SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de
+  ~ MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO DETERMINADO.
+  ~ Consulte la Licencia Pública General GNU para más detalles.
+  ~
+  ~ Debería haber recibido una copia de la Licencia Pública General GNU
+  ~ junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<resources>
+    <string name="app_name">INK-Dock_assistant</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_configuration">Configuración Conexión</string>
+    <string name="menu_dock_configuration">Configuración Muelle de carga</string>
+    <string name="menu_support">Contacto y Soporte</string>
+    <string name="menu_active_machines">Configuración Máquinas Activas</string>
+    <string name="menu_sinoptico">Sinóptico</string>
+    <string name="menu_usb_connection">Conexión USB</string>
+    <string name="menu_shelter_config">Configuración Abrigo</string>
+    <string name="menu_door_config">Configuración Puerta</string>
+    <string name="menu_platform_config">Configuración Plataforma</string>
+    <string name="menu_traffic_light_config">Configuración Semáforos</string>
+    <string name="menu_log">Registro de Actividad</string>
+    <!-- Switches Abrigo -->
+    <string name="shelter_switch_1">Modo Automático - H120.0</string>
+    <string name="shelter_switch_2">Modo Mantenimiento - H120.1</string>
+
+    <!-- Switches Plataforma P1 -->
+    <string name="platform_p1_switch_1">Señal plataforma en reposo - H124.0</string>
+    <string name="platform_p1_switch_2">Retorno automático - H124.1</string>
+    <string name="platform_p1_switch_3">Mantenimiento - H124.2</string>
+
+    <!-- Switches Plataforma P2 -->
+    <string name="platform_p2_switch_1">Señal plataforma en reposo - H124.0</string>
+    <string name="platform_p2_switch_2">1-3 uñas - H124.1</string>
+    <string name="platform_p2_switch_3">Retorno automático - H124.2</string>
+    <string name="platform_p2_switch_4">Mantenimiento - H124.3</string>
+
+    <!-- Switches Plataforma P3 -->
+    <string name="platform_p3_switch_1">Señal plataforma en reposo - H124.0</string>
+    <string name="platform_p3_switch_2">Mantenimiento - H124.1</string>
+
+    <!-- Switches Plataforma P4 (genérico - pendiente definir) -->
+    <string name="platform_p4_switch_1">Opción 1 - H124.0</string>
+    <string name="platform_p4_switch_2">Opción 2 - H124.1</string>
+    <string name="platform_p4_switch_3">Opción 3 - H124.2</string>
+    <string name="platform_p4_switch_4">Opción 4 - H124.3</string>
+    <string name="platform_p4_switch_5">Opción 5 - H124.4</string>
+    <string name="platform_p4_switch_6">Opción 6 - H124.5</string>
+    <string name="platform_p4_switch_7">Opción 7 - H124.6</string>
+
+    <!-- Botones genéricos -->
+    <string name="save_button">Guardar</string>
+    <string name="reset_button">Reset</string>
+
+    <!-- Labels para Abrigo -->
+    <string name="shelter_timer_label">Tiempo máximo hinchado (minutos) - D110</string>
+    <string name="shelter_counter_1_label">Horas Desde Últ. Mantenimiento - D111</string>
+    <string name="shelter_counter_2_label">Horas Funcionamiento Total - D112</string>
+
+    <!-- Switches Puerta -->
+    <string name="door_switch_1">Activar FTC de Arrastre - H122.0</string>
+    <string name="door_switch_2">Activar Seguridad Cables - H122.1</string>
+    <string name="door_switch_3">Integrar Abrigo Hinchable - H122.2</string>
+    <string name="door_switch_4">Modo Mantenimiento - H122.3</string>
+
+    <!-- Labels para Puerta -->
+    <string name="door_timer_label">Tiempo máximo maniobra (segundos) - D120</string>
+    <string name="door_counter_1_label">Maniobras Subida - D121</string>
+    <string name="door_counter_2_label">Maniobras Bajada - D122</string>
+    <string name="door_counter_3_label">Horas Desde Últ. Mantenimiento - D123</string>
+    <string name="door_counter_4_label">Horas Funcionamiento Total - D124</string>
+
+    <!-- Labels para Plataforma P1 -->
+    <string name="platform_p1_timer_label">Tiempo máximo subida - D130</string>
+    <string name="platform_p1_counter_1_label">Maniobras Subida - D133</string>
+    <string name="platform_p1_counter_2_label">Horas Desde Últ. Mantenimiento - D137</string>
+    <string name="platform_p1_counter_3_label">Horas Funcionamiento - D138</string>
+
+    <!-- Labels para Plataforma P2 -->
+    <string name="platform_p2_timer_1_label">Tiempo máximo subida - D130</string>
+    <string name="platform_p2_timer_2_label">Desfase sacar uña - D131</string>
+    <string name="platform_p2_counter_1_label">Pulsador Subida - D133</string>
+    <string name="platform_p2_counter_2_label">Pulsador Sacar Uña - D134</string>
+    <string name="platform_p2_counter_3_label">Pulsador Recoger Uña - D135</string>
+    <string name="platform_p2_counter_4_label">Horas Desde Últ. Mantenimiento - D137</string>
+    <string name="platform_p2_counter_5_label">Horas Bomba Hidráulica - D138</string>
+
+    <!-- Labels para Plataforma P3 -->
+    <string name="platform_p3_timer_label">Tiempo máximo subida - D130</string>
+    <string name="platform_p3_counter_1_label">Maniobras Subida - D133</string>
+    <string name="platform_p3_counter_2_label">Horas Desde Últ. Mantenimiento - D137</string>
+    <string name="platform_p3_counter_3_label">Horas Funcionamiento - D138</string>
+
+    <!-- Labels para Plataforma P4 (genérico - pendiente definir) -->
+    <string name="platform_p4_timer_label">Temporizador - D130</string>
+    <string name="platform_p4_counter_1_label">Contador 1 - D133</string>
+    <string name="platform_p4_counter_2_label">Horas Desde Últ. Mantenimiento - D137</string>
+    <string name="platform_p4_counter_3_label">Horas Funcionamiento - D138</string>
+
+    <!-- Pantalla Sinóptico -->
+    <string name="sinoptico_inputs_title">Estado de Entradas</string>
+    <string name="sinoptico_outputs_title">Estado de Salidas</string>
+    <string name="sinoptico_channel_title">%1$s (Canal %2$d)</string>
+    <string name="io_type_inputs">Entradas</string>
+    <string name="io_type_outputs">Salidas</string>
+    <string name="led_content_description">Indicador LED de estado</string>
+    <string name="sinoptico_memory_title">Lectura de Memoria</string>
+    <string name="sinoptico_memory_address_hint">Dirección (ej. D100)</string>
+    <string name="sinoptico_memory_value_default">Valor: -</string>
+    <string name="sinoptico_read_button">Leer</string>
+
+    <!-- Pantalla de Inicio -->
+    <string name="company_logo_description">Logotipo de la empresa</string>
+    <string name="app_version">Versión 1.9.4</string>
+    <string name="copyright">© 2025-2026 X. Rodriguez
+Licencia GNU GPL v3 o posterior.</string>
+
+    <!-- Pantalla de Configuración -->
+    <string name="config_plc_settings_title">Configuración del Equipo</string>
+    <string name="config_plc_model_label">Modelo de Equipo</string>
+    <string name="config_connection_settings_title">Tipo de Conexión</string>
+    <string name="config_connection_usb">USB (ESP32)</string>
+    <string name="config_connection_ethernet">Ethernet (PLC Omron)</string>
+    <string name="config_ethernet_settings_title">Configuración Ethernet</string>
+    <string name="config_plc_ip_address_label">Dirección IP del PLC</string>
+    <string name="config_client_node_label">Nodo FINS del Cliente</string>
+    <string name="config_client_node_hint">0 = Auto (1-254)</string>
+    <string name="config_ethernet_help_text">Nota: Para conexión directa al PLC, use un switch y configure una IP estática en los ajustes de Ethernet de Android.\nSi tiene múltiples dispositivos conectados (PC + Android), use nodos diferentes para cada uno (ej: PC=1, Android=2).</string>
+    <string name="config_test_usb_connection">Probar Conexión USB</string>
+    <string name="config_test_connection">Probar Conexión</string>
+    <string name="reconnect">Reconectar</string>
+    <string name="connect_button_label">Conectar</string>
+    <string name="disconnect_button_label">Desconectar</string>
+    <string name="config_usb_status_placeholder">Estado: Desconectado</string>
+    <string name="usb_status_no_device">Estado: No se encontró ningún dispositivo USB.</string>
+    <string name="usb_status_permission_granted">Estado: Permiso concedido. Conectando...</string>
+    <string name="usb_status_permission_denied">Estado: Permiso denegado.</string>
+    <string name="usb_status_requesting_permission">Estado: Solicitando permiso...</string>
+    <string name="usb_status_not_esp32">Estado: Dispositivo USB conectado, pero no es un ESP32.</string>
+    <string name="usb_status_connected">Estado: Conectado a ESP32</string>
+    <string name="usb_status_select_device">Seleccione un dispositivo ESP32 de la lista</string>
+    <string name="esp32_not_available_shelter">Abrigos no disponibles en modo ESP32</string>
+    <string name="esp32_not_available_door">Puertas no disponibles en modo ESP32</string>
+    <string name="usb_select_device_title">Seleccionar Dispositivo USB</string>
+    <string name="usb_select_device_message">Seleccione el dispositivo ESP32 para conectar:</string>
+    <string name="usb_no_devices_found">No se encontraron dispositivos USB conectados</string>
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="config_test_ethernet_connection">Probar Conexión Ethernet</string>
+    <string name="usb_status_success_read">Estado: Conectado. Leídos %1$d bytes.</string>
+    <string name="config_test_cio_read">Probar Lectura de Entradas</string>
+    <string name="ethernet_status_placeholder">Estado: Desconectado</string>
+    <string name="ethernet_status_connecting_to">Conectando a %1$s...</string>
+    <string name="ethernet_status_invalid_ip">La dirección IP no es válida.</string>
+    <string name="ethernet_status_success">¡Éxito! Valor de D0: %1$d</string>
+    <string name="ethernet_status_cio_success">¡Éxito! CIO 0 = %1$s</string>
+    <string name="ethernet_status_fins_error">Error FINS. Código: %1$d</string>
+    <string name="ethernet_status_timeout">Error: Timeout. El PLC no respondió.</string>
+    <string name="ethernet_status_unexpected_response">Respuesta inesperada del PLC.</string>
+    <string name="generic_status_error">Error: %1$s</string>
+    <string name="ethernet_status_network_error">Error de red. Verifique la conexión y la IP.</string>
+    <string name="ethernet_status_fins_disabled">Funcionalidad FINS deshabilitada.</string>
+    <string name="usb_status_connection_failed">Error al conectar por USB.</string>
+
+    <!-- Pantalla Muelle de Carga -->
+    <string name="dock_config_shelter_title">Abrigo Hinchable</string>
+    <string name="dock_config_platform_title">Plataforma</string>
+    <string name="dock_config_traffic_light_title">Secuencia Semáforos</string>
+
+    <string-array name="platform_types">
+        <item>Ninguna</item>
+        <item>P1</item>
+        <item>P2</item>
+        <item>P3</item>
+        <item>P4</item>
+    </string-array>
+
+    <string-array name="traffic_light_sequences">
+        <item>Ninguna</item>
+        <item>Detección vehiculo</item>
+        <item>Detección con puerta abierta</item>
+        <item>Detección con puerta abierta y rampa</item>
+        <item>Detección con puerta abierta y puerta cerrada</item>
+    </string-array>
+
+    <string-array name="traffic_light_sequence_descriptions">
+        <item>Sin secuencia</item>
+        <item>Detección de vehiculo mediante sistema de detección o retención.\n
+             Desbloqueo de puerta y cambio de semaforos interior y exterior simultaneo.</item>
+        <item>Detección de vehiculo mediante sistema de detección o retención.\n
+             Desbloqueo de puerta y cambio de semaforo exterior con detección o retención\n
+             e interior puerta abierta.</item>
+        <item>Detección de vehiculo mediante sistema de detección o retención.\n
+             Desbloqueo de puerta y cambio de semaforo exterior con detección o retención\n
+             e interior can rampa situada.</item>
+        <item>Detección de vehiculo mediante sistema de detección o retención.\n
+             Desbloqueo de puerta y secuencia de semaforos:\n
+             exterior con detección o retención\n
+             e interior puerta abierta.</item>
+    </string-array>
+
+    <!-- Pantalla de Soporte -->
+    <string name="support_contact_title">Contacto</string>
+    <string name="support_technical_title">Soporte Técnico</string>
+    <string name="support_email_label">Email: %1$s</string>
+    <string name="support_phone_label">Teléfono: %1$s</string>
+    <string name="support_whatsapp_label">WhatsApp: %1$s</string>
+    <string name="support_whatsapp_button">Contactar por WhatsApp</string>
+    <string name="support_no_email_app">No se encontró una aplicación de correo.</string>
+    <string name="support_no_phone_app">No se encontró una aplicación de teléfono.</string>
+    <string name="support_no_whatsapp_app">No se encontró la aplicación WhatsApp.</string>
+
+    <!-- Códigos de Eventos (debe coincidir con el orden de event_descriptions) -->
+    <integer-array name="event_codes">
+        <!-- 100-199: Abrigo (6 eventos) -->
+        <item>100</item> <!-- ACTIVACION ABRIGO -->
+        <item>101</item> <!-- INICIO HINCHADO ABRIGO -->
+        <item>102</item> <!-- INICIO DESHINCHADO ABRIGO -->
+        <item>103</item> <!-- ABRIGO HINCHADO -->
+        <item>114</item> <!-- INICIO MANTENIMIENTO ABRIGO -->
+        <item>115</item> <!-- FIN MANTENIMIENTO ABRIGO -->
+        <!-- 200-299: Puerta (11 eventos) -->
+        <item>200</item> <!-- ACTIVACION PUERTA -->
+        <item>201</item> <!-- INICIO SUBIDA PUERTA -->
+        <item>202</item> <!-- TIMEOUT APERTURA PUERTA -->
+        <item>203</item> <!-- PUERTA ABIERTA -->
+        <item>204</item> <!-- INICIO BAJADA PUERTA -->
+        <item>205</item> <!-- TIMEOUT CIERRRE PUERTA -->
+        <item>206</item> <!-- PUERTA CERRADA -->
+        <item>207</item> <!-- FALLO ROTURA CABLES -->
+        <item>208</item> <!-- FALLO FTC ARRASTRE -->
+        <item>214</item> <!-- INICIO MANTENIMIENTO PUERTA -->
+        <item>215</item> <!-- FIN MANTENIMIENTO PUERTA -->
+        <!-- 300-399: Plataforma (27 eventos) -->
+        <item>300</item> <!-- ACTIVACION PLATAFORMA -->
+        <item>301</item> <!-- SELECCIÓN MODELO PLATAFORMA P1 -->
+        <item>302</item> <!-- SELECCIÓN MODELO PLATAFORMA P2 -->
+        <item>303</item> <!-- SELECCIÓN MODELO PLATAFORMA P3 -->
+        <item>304</item> <!-- SELECCIÓN MODELO PLATAFORMA P4 -->
+        <item>305</item> <!-- INICIO SUBIDA P1 -->
+        <item>306</item> <!-- INICIO SUBIDA P2 -->
+        <item>307</item> <!-- INICIO EXTRAER LABIO P2 -->
+        <item>308</item> <!-- INICIO RECOGER LABIO P2 -->
+        <item>309</item> <!-- INICIO BAJADA P3 -->
+        <item>310</item> <!-- INICIO SUBIDA P3 -->
+        <item>311</item> <!-- INICIO SUBIDA P4 -->
+        <item>312</item> <!-- INICIO BAJADA P4 -->
+        <item>313</item> <!-- INICIO BAJADA LABIO P4 -->
+        <item>314</item> <!-- INICIO SUBIDA LABIO P4 -->
+        <item>315</item> <!-- TIMEOUT SUBIDA P1-P2 -->
+        <item>316</item> <!-- TIMEOUT SUBIDA P3 -->
+        <item>317</item> <!-- TIMEOUT BAJADA P3 -->
+        <item>318</item> <!-- TIMEOUT SUBIDA P4 -->
+        <item>319</item> <!-- TIMEOUT BAJADA P4 -->
+        <item>320</item> <!-- P4 PARO ARRIBA -->
+        <item>321</item> <!-- P4 PARO INTERMEDIO -->
+        <item>322</item> <!-- P4 PARO ABAJO -->
+        <item>323</item> <!-- APERTURA INTERLOCK ARRIBA P4 -->
+        <item>324</item> <!-- APERTURA INTERLOCK ABAJO P4 -->
+        <item>330</item> <!-- INICIO MANTENIMIENTO PLATAFORMA -->
+        <item>331</item> <!-- FIN MANTENIMIENTO PLATAFORMA -->
+        <!-- 400-499: Semáforos (5 eventos) -->
+        <item>400</item> <!-- ACTIVACION SEMAFOROS -->
+        <item>401</item> <!-- SELECCIÓN SEMAFOROS MODO 1 -->
+        <item>402</item> <!-- SELECCIÓN SEMAFOROS MODO 2 -->
+        <item>403</item> <!-- SELECCIÓN SEMAFOROS MODO 3 -->
+        <item>404</item> <!-- SELECCIÓN SEMAFOROS MODO 4 -->
+        <!-- 900-999: Sistema (9 eventos) -->
+        <item>900</item> <!-- INICIO SISTEMA -->
+        <item>901</item> <!-- PARADA SISTEMA -->
+        <item>902</item> <!-- CAMBIO PILA RTC -->
+        <item>903</item> <!-- SISTEMA OK -->
+        <item>904</item> <!-- CONEXIÓN ETHERNET -->
+        <item>905</item> <!-- EMERGENCIAS ACTIVADAS -->
+        <item>906</item> <!-- EMERGENCIAS DESACTIVADAS -->
+        <item>907</item> <!-- DETECCION VEHICULO INICIADA -->
+        <item>908</item> <!-- DETECCION VEHICULO FINALIZADA -->
+    </integer-array>
+
+    <!-- Descripciones de Eventos para el Registro de Actividad -->
+    <string-array name="event_descriptions">
+        <!-- 100-199: Abrigo -->
+        <item>ACTIVACION ABRIGO</item> <!-- 100 -->
+        <item>INICIO HINCHADO ABRIGO</item> <!-- 101 -->
+        <item>INICIO DESHINCHADO ABRIGO</item> <!-- 102 -->
+        <item>ABRIGO HINCHADO</item> <!-- 103 -->
+        <item>INICIO MANTENIMIENTO ABRIGO</item> <!-- 114 -->
+        <item>FIN MANTENIMIENTO ABRIGO</item> <!-- 115 -->
+        <!-- 200-299: Puerta -->
+        <item>ACTIVACION PUERTA</item> <!-- 200 -->
+        <item>INICIO SUBIDA PUERTA</item> <!-- 201 -->
+        <item>TIMEOUT APERTURA PUERTA</item> <!-- 202 -->
+        <item>PUERTA ABIERTA</item> <!-- 203 -->
+        <item>INICIO BAJADA PUERTA</item> <!-- 204 -->
+        <item>TIMEOUT CIERRRE PUERTA</item> <!-- 205 -->
+        <item>PUERTA CERRADA</item> <!-- 206 -->
+        <item>FALLO ROTURA CABLES</item> <!-- 207 -->
+        <item>FALLO FTC ARRASTRE</item> <!-- 208 -->
+        <item>INICIO MANTENIMIENTO PUERTA</item> <!-- 214 -->
+        <item>FIN MANTENIMIENTO PUERTA</item> <!-- 215 -->
+        <!-- 300-399: Plataforma -->
+        <item>ACTIVACION PLATAFORMA</item> <!-- 300 -->
+        <item>SELECCIÓN MODELO PLATAFORMA P1</item> <!-- 301 -->
+        <item>SELECCIÓN MODELO PLATAFORMA P2</item> <!-- 302 -->
+        <item>SELECCIÓN MODELO PLATAFORMA P3</item> <!-- 303 -->
+        <item>SELECCIÓN MODELO PLATAFORMA P4</item> <!-- 304 -->
+        <item>INICIO SUBIDA P1</item> <!-- 305 -->
+        <item>INICIO SUBIDA P2</item> <!-- 306 -->
+        <item>INICIO EXTRAER LABIO P2</item> <!-- 307 -->
+        <item>INICIO RECOGER LABIO P2</item> <!-- 308 -->
+        <item>INICIO BAJADA P3</item> <!-- 309 -->
+        <item>INICIO SUBIDA P3</item> <!-- 310 -->
+        <item>INICIO SUBIDA P4</item> <!-- 311 -->
+        <item>INICIO BAJADA P4</item> <!-- 312 -->
+        <item>INICIO BAJADA LABIO P4</item> <!-- 313 -->
+        <item>INICIO SUBIDA LABIO P4</item> <!-- 314 -->
+        <item>TIMEOUT SUBIDA P1-P2</item> <!-- 315 -->
+        <item>TIMEOUT SUBIDA P3</item> <!-- 316 -->
+        <item>TIMEOUT BAJADA P3</item> <!-- 317 -->
+        <item>TIMEOUT SUBIDA P4</item> <!-- 318 -->
+        <item>TIMEOUT BAJADA P4</item> <!-- 319 -->
+        <item>P4 PARO ARRIBA</item> <!-- 320 -->
+        <item>P4 PARO INTERMEDIO</item> <!-- 321 -->
+        <item>P4 PARO ABAJO</item> <!-- 322 -->
+        <item>APERTURA INTERLOCK ARRIBA P4</item> <!-- 323 -->
+        <item>APERTURA INTERLOCK ABAJO P4</item> <!-- 324 -->
+        <item>INICIO MANTENIMIENTO PLATAFORMA</item> <!-- 330 -->
+        <item>FIN MANTENIMIENTO PLATAFORMA</item> <!-- 331 -->
+        <!-- 400-499: Semáforos -->
+        <item>ACTIVACION SEMAFOROS</item> <!-- 400 -->
+        <item>SELECCIÓN SEMAFOROS MODO 1</item> <!-- 401 -->
+        <item>SELECCIÓN SEMAFOROS MODO 2</item> <!-- 402 -->
+        <item>SELECCIÓN SEMAFOROS MODO 3</item> <!-- 403 -->
+        <item>SELECCIÓN SEMAFOROS MODO 4</item> <!-- 404 -->
+        <!-- 900-999: Sistema -->
+        <item>INICIO SISTEMA</item> <!-- 900 -->
+        <item>PARADA SISTEMA</item> <!-- 901 -->
+        <item>CAMBIO PILA RTC</item> <!-- 902 -->
+        <item>SISTEMA OK</item> <!-- 903 -->
+        <item>CONEXIÓN ETHERNET</item> <!-- 904 -->
+        <item>EMERGENCIAS ACTIVADAS</item> <!-- 905 -->
+        <item>EMERGENCIAS DESACTIVADAS</item> <!-- 906 -->
+        <item>DETECCION VEHICULO INICIADA</item> <!-- 907 -->
+        <item>DETECCION VEHICULO FINALIZADA</item> <!-- 908 -->
+    </string-array>
+
+    <!-- Language Selection -->
+    <string name="language_selector_title">Language / Idioma / Langue</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_english">English</string>
+    <string name="language_french">Français</string>
+    <string name="language_restart_required">Language changed. Please restart the application.</string>
+
+</resources>

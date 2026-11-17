@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ INK OMRON Viewer - Monitorización y control de muelles de carga.
+  ~ Copyright (C) 2026 X. Rodriguez <xarosu@gmail.com>
+  ~
+  ~ Este programa es software libre: puedes redistribuirlo y/o modificarlo
+  ~ bajo los términos de la Licencia Pública General GNU publicada por la
+  ~ Free Software Foundation, ya sea la versión 3 de la Licencia, o
+  ~ cualquier versión posterior.
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil, pero
+  ~ SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de
+  ~ MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO DETERMINADO.
+  ~ Consulte la Licencia Pública General GNU para más detalles.
+  ~
+  ~ Debería haber recibido una copia de la Licencia Pública General GNU
+  ~ junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.support.SupportFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Card 1: Contacto -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/support_contact_title"
+                    android:textAppearance="?attr/textAppearanceHeadline5" />
+
+                <TextView
+                    android:id="@+id/textViewContactEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawablePadding="16dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    app:drawableStartCompat="@android:drawable/ic_dialog_email"
+                    tools:text="Email: xarosu@gmail.com" />
+
+                <TextView
+                    android:id="@+id/textViewContactPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawablePadding="16dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    app:drawableStartCompat="@android:drawable/ic_menu_call"
+                    tools:text="Teléfono: 000 000 000" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 2: Soporte Técnico -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/support_technical_title"
+                    android:textAppearance="?attr/textAppearanceHeadline5" />
+
+                <TextView
+                    android:id="@+id/textViewSupportEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawablePadding="16dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    app:drawableStartCompat="@android:drawable/ic_dialog_email"
+                    tools:text="Email: xarosu@gmail.com" />
+
+                <TextView
+                    android:id="@+id/textViewSupportPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawablePadding="16dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    app:drawableStartCompat="@android:drawable/ic_menu_call"
+                    tools:text="Teléfono: 000 000 000" />
+
+                <TextView
+                    android:id="@+id/textViewSupportWhatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawablePadding="16dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    app:drawableStartCompat="@android:drawable/sym_action_chat"
+                    tools:text="WhatsApp: 000 000 000" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 3: Selector de Idioma -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/language_selector_title"
+                    android:textAppearance="?attr/textAppearanceHeadline5" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSystem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="System / Sistema / Système"
+                        android:textAppearance="?attr/textAppearanceBody1" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSpanish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="@string/language_spanish"
+                        android:textAppearance="?attr/textAppearanceBody1" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonEnglish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="@string/language_english"
+                        android:textAppearance="?attr/textAppearanceBody1" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonFrench"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="@string/language_french"
+                        android:textAppearance="?attr/textAppearanceBody1" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

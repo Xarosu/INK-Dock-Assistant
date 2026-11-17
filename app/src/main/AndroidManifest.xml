@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ INK OMRON Viewer - Monitorización y control de muelles de carga.
+  ~ Copyright (C) 2026 X. Rodriguez <xarosu@gmail.com>
+  ~
+  ~ Este programa es software libre: puedes redistribuirlo y/o modificarlo
+  ~ bajo los términos de la Licencia Pública General GNU publicada por la
+  ~ Free Software Foundation, ya sea la versión 3 de la Licencia, o
+  ~ cualquier versión posterior.
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil, pero
+  ~ SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de
+  ~ MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO DETERMINADO.
+  ~ Consulte la Licencia Pública General GNU para más detalles.
+  ~
+  ~ Debería haber recibido una copia de la Licencia Pública General GNU
+  ~ junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permiso para acceder a la red (Ethernet y WiFi) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permiso para comprobar el estado de la red (recomendado) -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Modo Host USB (ESP32 y adaptador USB-Ethernet). El acceso a cada
+         dispositivo USB se concede en tiempo de ejecución con UsbManager. -->
+    <uses-feature android:name="android.hardware.usb.host" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- Permisos para escritura de archivos (Android 10+) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ink_omron_viewer"
+        android:enableOnBackInvokedCallback="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ink_omron_viewer.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Filtro para que la app se ofrezca al conectar un dispositivo USB -->
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+
+        <!-- FileProvider para compartir archivos CSV -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.ink_omron_viewer.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

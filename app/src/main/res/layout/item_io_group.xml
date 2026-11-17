@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ INK OMRON Viewer - Monitorización y control de muelles de carga.
+  ~ Copyright (C) 2026 X. Rodriguez <xarosu@gmail.com>
+  ~
+  ~ Este programa es software libre: puedes redistribuirlo y/o modificarlo
+  ~ bajo los términos de la Licencia Pública General GNU publicada por la
+  ~ Free Software Foundation, ya sea la versión 3 de la Licencia, o
+  ~ cualquier versión posterior.
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil, pero
+  ~ SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de
+  ~ MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO DETERMINADO.
+  ~ Consulte la Licencia Pública General GNU para más detalles.
+  ~
+  ~ Debería haber recibido una copia de la Licencia Pública General GNU
+  ~ junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view_channel_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        tools:text="Entradas (Canal 0)" />
+
+    <GridLayout
+        android:id="@+id/grid_layout_leds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:columnCount="8">
+
+        <!-- Sample LEDs for preview purposes. They are removed at runtime. -->
+        <include layout="@layout/item_led" />
+        <include layout="@layout/item_led" />
+        <include layout="@layout/item_led" />
+        <include layout="@layout/item_led" />
+        <include layout="@layout/item_led" />
+        <include layout="@layout/item_led" />
+        <include layout="@layout/item_led" />
+        <include layout="@layout/item_led" />
+    </GridLayout>
+
+</LinearLayout>

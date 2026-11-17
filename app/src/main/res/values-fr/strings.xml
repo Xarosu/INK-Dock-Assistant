@@ -1,0 +1,373 @@
+<!--
+  ~ INK OMRON Viewer - Monitorización y control de muelles de carga.
+  ~ Copyright (C) 2026 X. Rodriguez <xarosu@gmail.com>
+  ~
+  ~ Este programa es software libre: puedes redistribuirlo y/o modificarlo
+  ~ bajo los términos de la Licencia Pública General GNU publicada por la
+  ~ Free Software Foundation, ya sea la versión 3 de la Licencia, o
+  ~ cualquier versión posterior.
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil, pero
+  ~ SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de
+  ~ MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO DETERMINADO.
+  ~ Consulte la Licencia Pública General GNU para más detalles.
+  ~
+  ~ Debería haber recibido una copia de la Licencia Pública General GNU
+  ~ junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<resources>
+    <string name="app_name">INK-Dock_assistant</string>
+    <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
+    <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">En-tête de navigation</string>
+    <string name="action_settings">Paramètres</string>
+
+    <string name="menu_home">Accueil</string>
+    <string name="menu_configuration">Configuration de la connexion</string>
+    <string name="menu_dock_configuration">Configuration du quai de chargement</string>
+    <string name="menu_support">Contact et support</string>
+    <string name="menu_active_machines">Configuration des machines actives</string>
+    <string name="menu_sinoptico">Synoptique</string>
+    <string name="menu_usb_connection">Connexion USB</string>
+    <string name="menu_shelter_config">Configuration de l\'abri</string>
+    <string name="menu_door_config">Configuration de la porte</string>
+    <string name="menu_platform_config">Configuration de la plateforme</string>
+    <string name="menu_traffic_light_config">Configuration des feux de signalisation</string>
+    <string name="menu_log">Journal d\'activité</string>
+
+    <!-- Commutateurs de l'abri -->
+    <string name="shelter_switch_1">Mode automatique - H120.0</string>
+    <string name="shelter_switch_2">Mode maintenance - H120.1</string>
+
+    <!-- Commutateurs de la plateforme P1 -->
+    <string name="platform_p1_switch_1">Signal de plateforme au repos - H124.0</string>
+    <string name="platform_p1_switch_2">Retour automatique - H124.1</string>
+    <string name="platform_p1_switch_3">Maintenance - H124.2</string>
+
+    <!-- Commutateurs de la plateforme P2 -->
+    <string name="platform_p2_switch_1">Signal de plateforme au repos - H124.0</string>
+    <string name="platform_p2_switch_2">1-3 griffes - H124.1</string>
+    <string name="platform_p2_switch_3">Retour automatique - H124.2</string>
+    <string name="platform_p2_switch_4">Maintenance - H124.3</string>
+
+    <!-- Commutateurs de la plateforme P3 -->
+    <string name="platform_p3_switch_1">Signal de plateforme au repos - H124.0</string>
+    <string name="platform_p3_switch_2">Maintenance - H124.1</string>
+
+    <!-- Commutateurs de la plateforme P4 (génériques - en attente de définition) -->
+    <string name="platform_p4_switch_1">Option 1 - H124.0</string>
+    <string name="platform_p4_switch_2">Option 2 - H124.1</string>
+    <string name="platform_p4_switch_3">Option 3 - H124.2</string>
+    <string name="platform_p4_switch_4">Option 4 - H124.3</string>
+    <string name="platform_p4_switch_5">Option 5 - H124.4</string>
+    <string name="platform_p4_switch_6">Option 6 - H124.5</string>
+    <string name="platform_p4_switch_7">Option 7 - H124.6</string>
+
+    <!-- Boutons génériques -->
+    <string name="save_button">Enregistrer</string>
+    <string name="reset_button">Réinitialiser</string>
+
+    <!-- Étiquettes de l'abri -->
+    <string name="shelter_timer_label">Temps maximal gonflé (minutes) - D110</string>
+    <string name="shelter_counter_1_label">Heures depuis la dernière maintenance - D111</string>
+    <string name="shelter_counter_2_label">Heures de fonctionnement totales - D112</string>
+
+    <!-- Commutateurs de la porte -->
+    <string name="door_switch_1">Activer le traînage FTC - H122.0</string>
+    <string name="door_switch_2">Activer la sécurité du câble - H122.1</string>
+    <string name="door_switch_3">Intégrer l\'abri gonflable - H122.2</string>
+    <string name="door_switch_4">Mode maintenance - H122.3</string>
+
+    <!-- Étiquettes de la porte -->
+    <string name="door_timer_label">Temps maximal de manœuvre (secondes) - D120</string>
+    <string name="door_counter_1_label">Manœuvres vers le haut - D121</string>
+    <string name="door_counter_2_label">Manœuvres vers le bas - D122</string>
+    <string name="door_counter_3_label">Heures depuis la dernière maintenance - D123</string>
+    <string name="door_counter_4_label">Heures de fonctionnement totales - D124</string>
+
+    <!-- Étiquettes de la plateforme P1 -->
+    <string name="platform_p1_timer_label">Temps maximal de montée - D130</string>
+    <string name="platform_p1_counter_1_label">Manœuvres de montée - D133</string>
+    <string name="platform_p1_counter_2_label">Heures depuis la dernière maintenance - D137</string>
+    <string name="platform_p1_counter_3_label">Heures de fonctionnement - D138</string>
+
+    <!-- Étiquettes de la plateforme P2 -->
+    <string name="platform_p2_timer_1_label">Temps maximal de montée - D130</string>
+    <string name="platform_p2_timer_2_label">Décalage d\'extension de griffe - D131</string>
+    <string name="platform_p2_counter_1_label">Bouton de montée - D133</string>
+    <string name="platform_p2_counter_2_label">Bouton d\'extension de griffe - D134</string>
+    <string name="platform_p2_counter_3_label">Bouton de rétraction de griffe - D135</string>
+    <string name="platform_p2_counter_4_label">Heures depuis la dernière maintenance - D137</string>
+    <string name="platform_p2_counter_5_label">Heures de la pompe hydraulique - D138</string>
+
+    <!-- Étiquettes de la plateforme P3 -->
+    <string name="platform_p3_timer_label">Temps maximal de montée - D130</string>
+    <string name="platform_p3_counter_1_label">Manœuvres de montée - D133</string>
+    <string name="platform_p3_counter_2_label">Heures depuis la dernière maintenance - D137</string>
+    <string name="platform_p3_counter_3_label">Heures de fonctionnement - D138</string>
+
+    <!-- Étiquettes de la plateforme P4 (génériques - en attente de définition) -->
+    <string name="platform_p4_timer_label">Temporisateur - D130</string>
+    <string name="platform_p4_counter_1_label">Compteur 1 - D133</string>
+    <string name="platform_p4_counter_2_label">Heures depuis la dernière maintenance - D137</string>
+    <string name="platform_p4_counter_3_label">Heures de fonctionnement - D138</string>
+
+    <!-- Écran synoptique -->
+    <string name="sinoptico_inputs_title">État des entrées</string>
+    <string name="sinoptico_outputs_title">État des sorties</string>
+    <string name="sinoptico_channel_title">%1$s (Canal %2$d)</string>
+    <string name="io_type_inputs">Entrées</string>
+    <string name="io_type_outputs">Sorties</string>
+    <string name="led_content_description">Indicateur LED d\'état</string>
+    <string name="sinoptico_memory_title">Lecture de mémoire</string>
+    <string name="sinoptico_memory_address_hint">Adresse (ex. D100)</string>
+    <string name="sinoptico_memory_value_default">Valeur : -</string>
+    <string name="sinoptico_read_button">Lire</string>
+
+    <!-- Écran d'accueil -->
+    <string name="company_logo_description">Logo de l\'entreprise</string>
+    <string name="app_version">Version 1.9.4</string>
+    <string name="copyright">© 2025-2026 X. Rodriguez
+Licence GNU GPL v3 ou ultérieure.</string>
+
+    <!-- Écran de configuration -->
+    <string name="config_plc_settings_title">Configuration de l\'équipement</string>
+    <string name="config_plc_model_label">Modèle d\'équipement</string>
+    <string name="config_connection_settings_title">Type de connexion</string>
+    <string name="config_connection_usb">USB (ESP32)</string>
+    <string name="config_connection_ethernet">Ethernet (PLC Omron)</string>
+    <string name="config_ethernet_settings_title">Configuration Ethernet</string>
+    <string name="config_plc_ip_address_label">Adresse IP du PLC</string>
+    <string name="config_client_node_label">Nœud client FINS</string>
+    <string name="config_client_node_hint">0 = Auto (1-254)</string>
+    <string name="config_ethernet_help_text">Note : Pour une connexion directe au PLC, utilisez un commutateur et configurez une IP statique dans les paramètres Ethernet d\'Android.\nSi vous avez plusieurs appareils connectés (PC + Android), utilisez des nœuds différents pour chacun (ex. : PC=1, Android=2).</string>
+    <string name="config_test_usb_connection">Tester la connexion USB</string>
+    <string name="config_test_connection">Tester la connexion</string>
+    <string name="reconnect">Reconnecter</string>
+    <string name="connect_button_label">Connecter</string>
+    <string name="disconnect_button_label">Déconnecter</string>
+    <string name="config_usb_status_placeholder">État : Déconnecté</string>
+    <string name="usb_status_no_device">État : Aucun périphérique USB trouvé.</string>
+    <string name="usb_status_permission_granted">État : Autorisation accordée. Connexion...</string>
+    <string name="usb_status_permission_denied">État : Autorisation refusée.</string>
+    <string name="usb_status_requesting_permission">État : Demande d\'autorisation...</string>
+    <string name="usb_status_not_esp32">État : Périphérique USB connecté, mais ce n\'est pas un ESP32.</string>
+    <string name="usb_status_connected">État : Connecté à l\'ESP32</string>
+    <string name="usb_status_select_device">Sélectionnez un périphérique ESP32 dans la liste</string>
+    <string name="esp32_not_available_shelter">Abris non disponibles en mode ESP32</string>
+    <string name="esp32_not_available_door">Portes non disponibles en mode ESP32</string>
+    <string name="usb_select_device_title">Sélectionner un périphérique USB</string>
+    <string name="usb_select_device_message">Sélectionnez le périphérique ESP32 à connecter :</string>
+    <string name="usb_no_devices_found">Aucun périphérique USB trouvé</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="config_test_ethernet_connection">Tester la connexion Ethernet</string>
+    <string name="usb_status_success_read">État : Connecté. %1$d octets lus.</string>
+    <string name="config_test_cio_read">Tester la lecture d\'entrée</string>
+    <string name="ethernet_status_placeholder">État : Déconnecté</string>
+    <string name="ethernet_status_connecting_to">Connexion à %1$s...</string>
+    <string name="ethernet_status_invalid_ip">L\'adresse IP n\'est pas valide.</string>
+    <string name="ethernet_status_success">Succès ! Valeur D0 : %1$d</string>
+    <string name="ethernet_status_cio_success">Succès ! CIO 0 = %1$s</string>
+    <string name="ethernet_status_fins_error">Erreur FINS. Code : %1$d</string>
+    <string name="ethernet_status_timeout">Erreur : Délai d\'attente dépassé. Le PLC n\'a pas répondu.</string>
+    <string name="ethernet_status_unexpected_response">Réponse inattendue du PLC.</string>
+    <string name="generic_status_error">Erreur : %1$s</string>
+    <string name="ethernet_status_network_error">Erreur réseau. Vérifiez la connexion et l\'IP.</string>
+    <string name="ethernet_status_fins_disabled">Fonctionnalité FINS désactivée.</string>
+    <string name="usb_status_connection_failed">Échec de la connexion USB.</string>
+
+    <!-- Écran du quai de chargement -->
+    <string name="dock_config_shelter_title">Abri gonflable</string>
+    <string name="dock_config_platform_title">Plateforme</string>
+    <string name="dock_config_traffic_light_title">Séquence de feux de signalisation</string>
+
+    <string-array name="platform_types">
+        <item>Aucune</item>
+        <item>P1</item>
+        <item>P2</item>
+        <item>P3</item>
+        <item>P4</item>
+    </string-array>
+
+    <string-array name="traffic_light_sequences">
+        <item>Aucune</item>
+        <item>Détection de véhicule</item>
+        <item>Détection avec porte ouverte</item>
+        <item>Détection avec porte ouverte et rampe</item>
+        <item>Détection avec porte ouverte et fermée</item>
+    </string-array>
+
+    <string-array name="traffic_light_sequence_descriptions">
+        <item>Aucune séquence</item>
+        <item>Détection de véhicule via système de détection ou de rétention.\n
+             Déverrouillage de la porte et changement simultané des feux intérieurs et extérieurs.</item>
+        <item>Détection de véhicule via système de détection ou de rétention.\n
+             Déverrouillage de la porte et changement des feux extérieurs avec détection ou rétention\n
+             et intérieurs avec porte ouverte.</item>
+        <item>Détection de véhicule via système de détection ou de rétention.\n
+             Déverrouillage de la porte et changement des feux extérieurs avec détection ou rétention\n
+             et intérieurs avec rampe en position.</item>
+        <item>Détection de véhicule via système de détection ou de rétention.\n
+             Déverrouillage de la porte et séquence de feux :\n
+             extérieurs avec détection ou rétention\n
+             et intérieurs avec porte ouverte.</item>
+    </string-array>
+
+    <!-- Écran de support -->
+    <string name="support_contact_title">Contact</string>
+    <string name="support_technical_title">Support technique</string>
+    <string name="support_email_label">Email : %1$s</string>
+    <string name="support_phone_label">Téléphone : %1$s</string>
+    <string name="support_whatsapp_label">WhatsApp : %1$s</string>
+    <string name="support_whatsapp_button">Contacter via WhatsApp</string>
+    <string name="support_no_email_app">Aucune application de messagerie trouvée.</string>
+    <string name="support_no_phone_app">Aucune application de téléphone trouvée.</string>
+    <string name="support_no_whatsapp_app">Application WhatsApp introuvable.</string>
+
+    <!-- Codes d'événements (doit correspondre à l'ordre de event_descriptions) -->
+    <integer-array name="event_codes">
+        <!-- 100-199: Abri (6 événements) -->
+        <item>100</item> <!-- ACTIVATION ABRI -->
+        <item>101</item> <!-- DÉBUT GONFLAGE ABRI -->
+        <item>102</item> <!-- DÉBUT DÉGONFLAGE ABRI -->
+        <item>103</item> <!-- ABRI GONFLÉ -->
+        <item>114</item> <!-- DÉBUT MAINTENANCE ABRI -->
+        <item>115</item> <!-- FIN MAINTENANCE ABRI -->
+        <!-- 200-299: Porte (11 événements) -->
+        <item>200</item> <!-- ACTIVATION PORTE -->
+        <item>201</item> <!-- DÉBUT MONTÉE PORTE -->
+        <item>202</item> <!-- DÉLAI D'OUVERTURE PORTE -->
+        <item>203</item> <!-- PORTE OUVERTE -->
+        <item>204</item> <!-- DÉBUT DESCENTE PORTE -->
+        <item>205</item> <!-- DÉLAI DE FERMETURE PORTE -->
+        <item>206</item> <!-- PORTE FERMÉE -->
+        <item>207</item> <!-- DÉFAILLANCE RUPTURE CÂBLE -->
+        <item>208</item> <!-- DÉFAILLANCE TRAÎNAGE FTC -->
+        <item>214</item> <!-- DÉBUT MAINTENANCE PORTE -->
+        <item>215</item> <!-- FIN MAINTENANCE PORTE -->
+        <!-- 300-399: Plateforme (27 événements) -->
+        <item>300</item> <!-- ACTIVATION PLATEFORME -->
+        <item>301</item> <!-- SÉLECTION MODÈLE PLATEFORME P1 -->
+        <item>302</item> <!-- SÉLECTION MODÈLE PLATEFORME P2 -->
+        <item>303</item> <!-- SÉLECTION MODÈLE PLATEFORME P3 -->
+        <item>304</item> <!-- SÉLECTION MODÈLE PLATEFORME P4 -->
+        <item>305</item> <!-- DÉBUT MONTÉE P1 -->
+        <item>306</item> <!-- DÉBUT MONTÉE P2 -->
+        <item>307</item> <!-- DÉBUT EXTENSION GRIFFE P2 -->
+        <item>308</item> <!-- DÉBUT RÉTRACTION GRIFFE P2 -->
+        <item>309</item> <!-- DÉBUT DESCENTE P3 -->
+        <item>310</item> <!-- DÉBUT MONTÉE P3 -->
+        <item>311</item> <!-- DÉBUT MONTÉE P4 -->
+        <item>312</item> <!-- DÉBUT DESCENTE P4 -->
+        <item>313</item> <!-- DÉBUT DESCENTE LÈVRE P4 -->
+        <item>314</item> <!-- DÉBUT MONTÉE LÈVRE P4 -->
+        <item>315</item> <!-- DÉLAI MONTÉE P1-P2 -->
+        <item>316</item> <!-- DÉLAI MONTÉE P3 -->
+        <item>317</item> <!-- DÉLAI DESCENTE P3 -->
+        <item>318</item> <!-- DÉLAI MONTÉE P4 -->
+        <item>319</item> <!-- DÉLAI DESCENTE P4 -->
+        <item>320</item> <!-- ARRÊT HAUT P4 -->
+        <item>321</item> <!-- ARRÊT MILIEU P4 -->
+        <item>322</item> <!-- ARRÊT BAS P4 -->
+        <item>323</item> <!-- OUVERTURE VERROUILLAGE HAUT P4 -->
+        <item>324</item> <!-- OUVERTURE VERROUILLAGE BAS P4 -->
+        <item>330</item> <!-- DÉBUT MAINTENANCE PLATEFORME -->
+        <item>331</item> <!-- FIN MAINTENANCE PLATEFORME -->
+        <!-- 400-499: Feux de signalisation (5 événements) -->
+        <item>400</item> <!-- ACTIVATION FEUX DE SIGNALISATION -->
+        <item>401</item> <!-- SÉLECTION MODE 1 FEUX DE SIGNALISATION -->
+        <item>402</item> <!-- SÉLECTION MODE 2 FEUX DE SIGNALISATION -->
+        <item>403</item> <!-- SÉLECTION MODE 3 FEUX DE SIGNALISATION -->
+        <item>404</item> <!-- SÉLECTION MODE 4 FEUX DE SIGNALISATION -->
+        <!-- 900-999: Système (9 événements) -->
+        <item>900</item> <!-- DÉMARRAGE SYSTÈME -->
+        <item>901</item> <!-- ARRÊT SYSTÈME -->
+        <item>902</item> <!-- CHANGEMENT BATTERIE RTC -->
+        <item>903</item> <!-- SYSTÈME OK -->
+        <item>904</item> <!-- CONNEXION ETHERNET -->
+        <item>905</item> <!-- URGENCES ACTIVÉES -->
+        <item>906</item> <!-- URGENCES DÉSACTIVÉES -->
+        <item>907</item> <!-- DÉTECTION VÉHICULE COMMENCÉE -->
+        <item>908</item> <!-- DÉTECTION VÉHICULE TERMINÉE -->
+    </integer-array>
+
+    <!-- Descriptions d'événements pour le journal d'activité -->
+    <string-array name="event_descriptions">
+        <!-- 100-199: Abri -->
+        <item>ACTIVATION ABRI</item> <!-- 100 -->
+        <item>DÉBUT GONFLAGE ABRI</item> <!-- 101 -->
+        <item>DÉBUT DÉGONFLAGE ABRI</item> <!-- 102 -->
+        <item>ABRI GONFLÉ</item> <!-- 103 -->
+        <item>DÉBUT MAINTENANCE ABRI</item> <!-- 114 -->
+        <item>FIN MAINTENANCE ABRI</item> <!-- 115 -->
+        <!-- 200-299: Porte -->
+        <item>ACTIVATION PORTE</item> <!-- 200 -->
+        <item>DÉBUT MONTÉE PORTE</item> <!-- 201 -->
+        <item>DÉLAI D\'OUVERTURE PORTE</item> <!-- 202 -->
+        <item>PORTE OUVERTE</item> <!-- 203 -->
+        <item>DÉBUT DESCENTE PORTE</item> <!-- 204 -->
+        <item>DÉLAI DE FERMETURE PORTE</item> <!-- 205 -->
+        <item>PORTE FERMÉE</item> <!-- 206 -->
+        <item>DÉFAILLANCE RUPTURE CÂBLE</item> <!-- 207 -->
+        <item>DÉFAILLANCE TRAÎNAGE FTC</item> <!-- 208 -->
+        <item>DÉBUT MAINTENANCE PORTE</item> <!-- 214 -->
+        <item>FIN MAINTENANCE PORTE</item> <!-- 215 -->
+        <!-- 300-399: Plateforme -->
+        <item>ACTIVATION PLATEFORME</item> <!-- 300 -->
+        <item>SÉLECTION MODÈLE PLATEFORME P1</item> <!-- 301 -->
+        <item>SÉLECTION MODÈLE PLATEFORME P2</item> <!-- 302 -->
+        <item>SÉLECTION MODÈLE PLATEFORME P3</item> <!-- 303 -->
+        <item>SÉLECTION MODÈLE PLATEFORME P4</item> <!-- 304 -->
+        <item>DÉBUT MONTÉE P1</item> <!-- 305 -->
+        <item>DÉBUT MONTÉE P2</item> <!-- 306 -->
+        <item>DÉBUT EXTENSION GRIFFE P2</item> <!-- 307 -->
+        <item>DÉBUT RÉTRACTION GRIFFE P2</item> <!-- 308 -->
+        <item>DÉBUT DESCENTE P3</item> <!-- 309 -->
+        <item>DÉBUT MONTÉE P3</item> <!-- 310 -->
+        <item>DÉBUT MONTÉE P4</item> <!-- 311 -->
+        <item>DÉBUT DESCENTE P4</item> <!-- 312 -->
+        <item>DÉBUT DESCENTE LÈVRE P4</item> <!-- 313 -->
+        <item>DÉBUT MONTÉE LÈVRE P4</item> <!-- 314 -->
+        <item>DÉLAI MONTÉE P1-P2</item> <!-- 315 -->
+        <item>DÉLAI MONTÉE P3</item> <!-- 316 -->
+        <item>DÉLAI DESCENTE P3</item> <!-- 317 -->
+        <item>DÉLAI MONTÉE P4</item> <!-- 318 -->
+        <item>DÉLAI DESCENTE P4</item> <!-- 319 -->
+        <item>ARRÊT HAUT P4</item> <!-- 320 -->
+        <item>ARRÊT MILIEU P4</item> <!-- 321 -->
+        <item>ARRÊT BAS P4</item> <!-- 322 -->
+        <item>OUVERTURE VERROUILLAGE HAUT P4</item> <!-- 323 -->
+        <item>OUVERTURE VERROUILLAGE BAS P4</item> <!-- 324 -->
+        <item>DÉBUT MAINTENANCE PLATEFORME</item> <!-- 330 -->
+        <item>FIN MAINTENANCE PLATEFORME</item> <!-- 331 -->
+        <!-- 400-499: Feux de signalisation -->
+        <item>ACTIVATION FEUX DE SIGNALISATION</item> <!-- 400 -->
+        <item>SÉLECTION MODE 1 FEUX DE SIGNALISATION</item> <!-- 401 -->
+        <item>SÉLECTION MODE 2 FEUX DE SIGNALISATION</item> <!-- 402 -->
+        <item>SÉLECTION MODE 3 FEUX DE SIGNALISATION</item> <!-- 403 -->
+        <item>SÉLECTION MODE 4 FEUX DE SIGNALISATION</item> <!-- 404 -->
+        <!-- 900-999: Système -->
+        <item>DÉMARRAGE SYSTÈME</item> <!-- 900 -->
+        <item>ARRÊT SYSTÈME</item> <!-- 901 -->
+        <item>CHANGEMENT BATTERIE RTC</item> <!-- 902 -->
+        <item>SYSTÈME OK</item> <!-- 903 -->
+        <item>CONNEXION ETHERNET</item> <!-- 904 -->
+        <item>URGENCES ACTIVÉES</item> <!-- 905 -->
+        <item>URGENCES DÉSACTIVÉES</item> <!-- 906 -->
+        <item>DÉTECTION VÉHICULE COMMENCÉE</item> <!-- 907 -->
+        <item>DÉTECTION VÉHICULE TERMINÉE</item> <!-- 908 -->
+    </string-array>
+
+    <!-- Sélection de langue -->
+    <string name="language_selector_title">Language / Idioma / Langue</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_english">English</string>
+    <string name="language_french">Français</string>
+    <string name="language_restart_required">Langue modifiée. Veuillez redémarrer l\'application.</string>
+
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ INK OMRON Viewer - Monitorización y control de muelles de carga.
+  ~ Copyright (C) 2026 X. Rodriguez <xarosu@gmail.com>
+  ~
+  ~ Este programa es software libre: puedes redistribuirlo y/o modificarlo
+  ~ bajo los términos de la Licencia Pública General GNU publicada por la
+  ~ Free Software Foundation, ya sea la versión 3 de la Licencia, o
+  ~ cualquier versión posterior.
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil, pero
+  ~ SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de
+  ~ MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO DETERMINADO.
+  ~ Consulte la Licencia Pública General GNU para más detalles.
+  ~
+  ~ Debería haber recibido una copia de la Licencia Pública General GNU
+  ~ junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.ink_omron_viewer.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_configuration"
+        android:name="com.example.ink_omron_viewer.ui.configuration.ConfigurationFragment"
+        android:label="@string/menu_configuration"
+        tools:layout="@layout/fragment_configuration" />
+
+    <fragment
+        android:id="@+id/nav_synoptic"
+        android:name="com.example.ink_omron_viewer.ui.synoptic.SynopticFragment"
+        android:label="@string/menu_sinoptico"
+        tools:layout="@layout/fragment_synoptic" />
+
+    <fragment
+        android:id="@+id/nav_dock_configuration"
+        android:name="com.example.ink_omron_viewer.ui.dock.DockConfigurationFragment"
+        android:label="@string/menu_dock_configuration"
+        tools:layout="@layout/fragment_dock_configuration" />
+
+    <fragment
+        android:id="@+id/nav_support"
+        android:name="com.example.ink_omron_viewer.ui.support.SupportFragment"
+        android:label="@string/menu_support"
+        tools:layout="@layout/fragment_support" />
+    
+    <fragment
+        android:id="@+id/nav_shelter_config"
+        android:name="com.example.ink_omron_viewer.ui.machines.ShelterConfigurationFragment"
+        android:label="@string/menu_shelter_config"
+        tools:layout="@layout/fragment_machine_shelter" />
+
+    <!-- Los siguientes fragmentos se crearán de forma similar -->
+    <fragment
+        android:id="@+id/nav_door_config"
+        android:name="com.example.ink_omron_viewer.ui.machines.DoorConfigurationFragment"
+        android:label="@string/menu_door_config"
+        tools:layout="@layout/fragment_machine_door" />
+    <fragment
+        android:id="@+id/nav_platform_config"
+        android:name="com.example.ink_omron_viewer.ui.machines.PlatformConfigurationFragment"
+        android:label="@string/menu_platform_config"
+        tools:layout="@layout/fragment_machine_platform" />
+    <fragment
+        android:id="@+id/nav_traffic_light_config"
+        android:name="com.example.ink_omron_viewer.ui.machines.TrafficLightConfigurationFragment"
+        android:label="@string/menu_traffic_light_config"
+        tools:layout="@layout/fragment_machine_traffic_light" />
+
+    <fragment
+        android:id="@+id/nav_log"
+        android:name="com.example.ink_omron_viewer.ui.log.LogFragment"
+        android:label="@string/menu_log"
+        tools:layout="@layout/fragment_log" />
+
+</navigation>

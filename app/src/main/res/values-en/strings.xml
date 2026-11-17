@@ -1,0 +1,373 @@
+<!--
+  ~ INK OMRON Viewer - Monitorización y control de muelles de carga.
+  ~ Copyright (C) 2026 X. Rodriguez <xarosu@gmail.com>
+  ~
+  ~ Este programa es software libre: puedes redistribuirlo y/o modificarlo
+  ~ bajo los términos de la Licencia Pública General GNU publicada por la
+  ~ Free Software Foundation, ya sea la versión 3 de la Licencia, o
+  ~ cualquier versión posterior.
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil, pero
+  ~ SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de
+  ~ MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO DETERMINADO.
+  ~ Consulte la Licencia Pública General GNU para más detalles.
+  ~
+  ~ Debería haber recibido una copia de la Licencia Pública General GNU
+  ~ junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<resources>
+    <string name="app_name">INK-Dock_assistant</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_configuration">Connection Configuration</string>
+    <string name="menu_dock_configuration">Loading Dock Configuration</string>
+    <string name="menu_support">Contact and Support</string>
+    <string name="menu_active_machines">Active Machines Configuration</string>
+    <string name="menu_sinoptico">Synoptic</string>
+    <string name="menu_usb_connection">USB Connection</string>
+    <string name="menu_shelter_config">Shelter Configuration</string>
+    <string name="menu_door_config">Door Configuration</string>
+    <string name="menu_platform_config">Platform Configuration</string>
+    <string name="menu_traffic_light_config">Traffic Lights Configuration</string>
+    <string name="menu_log">Activity Log</string>
+
+    <!-- Shelter Switches -->
+    <string name="shelter_switch_1">Automatic Mode - H120.0</string>
+    <string name="shelter_switch_2">Maintenance Mode - H120.1</string>
+
+    <!-- Platform P1 Switches -->
+    <string name="platform_p1_switch_1">Platform at Rest Signal - H124.0</string>
+    <string name="platform_p1_switch_2">Automatic Return - H124.1</string>
+    <string name="platform_p1_switch_3">Maintenance - H124.2</string>
+
+    <!-- Platform P2 Switches -->
+    <string name="platform_p2_switch_1">Platform at Rest Signal - H124.0</string>
+    <string name="platform_p2_switch_2">1-3 Claws - H124.1</string>
+    <string name="platform_p2_switch_3">Automatic Return - H124.2</string>
+    <string name="platform_p2_switch_4">Maintenance - H124.3</string>
+
+    <!-- Platform P3 Switches -->
+    <string name="platform_p3_switch_1">Platform at Rest Signal - H124.0</string>
+    <string name="platform_p3_switch_2">Maintenance - H124.1</string>
+
+    <!-- Platform P4 Switches (generic - pending definition) -->
+    <string name="platform_p4_switch_1">Option 1 - H124.0</string>
+    <string name="platform_p4_switch_2">Option 2 - H124.1</string>
+    <string name="platform_p4_switch_3">Option 3 - H124.2</string>
+    <string name="platform_p4_switch_4">Option 4 - H124.3</string>
+    <string name="platform_p4_switch_5">Option 5 - H124.4</string>
+    <string name="platform_p4_switch_6">Option 6 - H124.5</string>
+    <string name="platform_p4_switch_7">Option 7 - H124.6</string>
+
+    <!-- Generic buttons -->
+    <string name="save_button">Save</string>
+    <string name="reset_button">Reset</string>
+
+    <!-- Shelter Labels -->
+    <string name="shelter_timer_label">Maximum Inflated Time (minutes) - D110</string>
+    <string name="shelter_counter_1_label">Hours Since Last Maintenance - D111</string>
+    <string name="shelter_counter_2_label">Total Operating Hours - D112</string>
+
+    <!-- Door Switches -->
+    <string name="door_switch_1">Enable Drag FTC - H122.0</string>
+    <string name="door_switch_2">Enable Cable Safety - H122.1</string>
+    <string name="door_switch_3">Integrate Inflatable Shelter - H122.2</string>
+    <string name="door_switch_4">Maintenance Mode - H122.3</string>
+
+    <!-- Door Labels -->
+    <string name="door_timer_label">Maximum Maneuver Time (seconds) - D120</string>
+    <string name="door_counter_1_label">Upward Maneuvers - D121</string>
+    <string name="door_counter_2_label">Downward Maneuvers - D122</string>
+    <string name="door_counter_3_label">Hours Since Last Maintenance - D123</string>
+    <string name="door_counter_4_label">Total Operating Hours - D124</string>
+
+    <!-- Platform P1 Labels -->
+    <string name="platform_p1_timer_label">Maximum Rise Time - D130</string>
+    <string name="platform_p1_counter_1_label">Rise Maneuvers - D133</string>
+    <string name="platform_p1_counter_2_label">Hours Since Last Maintenance - D137</string>
+    <string name="platform_p1_counter_3_label">Operating Hours - D138</string>
+
+    <!-- Platform P2 Labels -->
+    <string name="platform_p2_timer_1_label">Maximum Rise Time - D130</string>
+    <string name="platform_p2_timer_2_label">Claw Extension Offset - D131</string>
+    <string name="platform_p2_counter_1_label">Rise Button - D133</string>
+    <string name="platform_p2_counter_2_label">Extend Claw Button - D134</string>
+    <string name="platform_p2_counter_3_label">Retract Claw Button - D135</string>
+    <string name="platform_p2_counter_4_label">Hours Since Last Maintenance - D137</string>
+    <string name="platform_p2_counter_5_label">Hydraulic Pump Hours - D138</string>
+
+    <!-- Platform P3 Labels -->
+    <string name="platform_p3_timer_label">Maximum Rise Time - D130</string>
+    <string name="platform_p3_counter_1_label">Rise Maneuvers - D133</string>
+    <string name="platform_p3_counter_2_label">Hours Since Last Maintenance - D137</string>
+    <string name="platform_p3_counter_3_label">Operating Hours - D138</string>
+
+    <!-- Platform P4 Labels (generic - pending definition) -->
+    <string name="platform_p4_timer_label">Timer - D130</string>
+    <string name="platform_p4_counter_1_label">Counter 1 - D133</string>
+    <string name="platform_p4_counter_2_label">Hours Since Last Maintenance - D137</string>
+    <string name="platform_p4_counter_3_label">Operating Hours - D138</string>
+
+    <!-- Synoptic Screen -->
+    <string name="sinoptico_inputs_title">Input Status</string>
+    <string name="sinoptico_outputs_title">Output Status</string>
+    <string name="sinoptico_channel_title">%1$s (Channel %2$d)</string>
+    <string name="io_type_inputs">Inputs</string>
+    <string name="io_type_outputs">Outputs</string>
+    <string name="led_content_description">Status LED indicator</string>
+    <string name="sinoptico_memory_title">Memory Read</string>
+    <string name="sinoptico_memory_address_hint">Address (e.g. D100)</string>
+    <string name="sinoptico_memory_value_default">Value: -</string>
+    <string name="sinoptico_read_button">Read</string>
+
+    <!-- Home Screen -->
+    <string name="company_logo_description">Company logo</string>
+    <string name="app_version">Version 1.9.4</string>
+    <string name="copyright">© 2025-2026 X. Rodriguez
+GNU GPL v3 or later licence.</string>
+
+    <!-- Configuration Screen -->
+    <string name="config_plc_settings_title">Equipment Configuration</string>
+    <string name="config_plc_model_label">Equipment Model</string>
+    <string name="config_connection_settings_title">Connection Type</string>
+    <string name="config_connection_usb">USB (ESP32)</string>
+    <string name="config_connection_ethernet">Ethernet (Omron PLC)</string>
+    <string name="config_ethernet_settings_title">Ethernet Configuration</string>
+    <string name="config_plc_ip_address_label">PLC IP Address</string>
+    <string name="config_client_node_label">FINS Client Node</string>
+    <string name="config_client_node_hint">0 = Auto (1-254)</string>
+    <string name="config_ethernet_help_text">Note: For direct PLC connection, use a switch and configure a static IP in Android Ethernet settings.\nIf you have multiple devices connected (PC + Android), use different nodes for each one (e.g.: PC=1, Android=2).</string>
+    <string name="config_test_usb_connection">Test USB Connection</string>
+    <string name="config_test_connection">Test Connection</string>
+    <string name="reconnect">Reconnect</string>
+    <string name="connect_button_label">Connect</string>
+    <string name="disconnect_button_label">Disconnect</string>
+    <string name="config_usb_status_placeholder">Status: Disconnected</string>
+    <string name="usb_status_no_device">Status: No USB device found.</string>
+    <string name="usb_status_permission_granted">Status: Permission granted. Connecting...</string>
+    <string name="usb_status_permission_denied">Status: Permission denied.</string>
+    <string name="usb_status_requesting_permission">Status: Requesting permission...</string>
+    <string name="usb_status_not_esp32">Status: USB device connected, but it is not an ESP32.</string>
+    <string name="usb_status_connected">Status: Connected to ESP32</string>
+    <string name="usb_status_select_device">Select an ESP32 device from the list</string>
+    <string name="esp32_not_available_shelter">Shelters not available in ESP32 mode</string>
+    <string name="esp32_not_available_door">Doors not available in ESP32 mode</string>
+    <string name="usb_select_device_title">Select USB Device</string>
+    <string name="usb_select_device_message">Select the ESP32 device to connect:</string>
+    <string name="usb_no_devices_found">No USB devices found</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="config_test_ethernet_connection">Test Ethernet Connection</string>
+    <string name="usb_status_success_read">Status: Connected. Read %1$d bytes.</string>
+    <string name="config_test_cio_read">Test Input Read</string>
+    <string name="ethernet_status_placeholder">Status: Disconnected</string>
+    <string name="ethernet_status_connecting_to">Connecting to %1$s...</string>
+    <string name="ethernet_status_invalid_ip">IP address is not valid.</string>
+    <string name="ethernet_status_success">Success! D0 value: %1$d</string>
+    <string name="ethernet_status_cio_success">Success! CIO 0 = %1$s</string>
+    <string name="ethernet_status_fins_error">FINS error. Code: %1$d</string>
+    <string name="ethernet_status_timeout">Error: Timeout. PLC did not respond.</string>
+    <string name="ethernet_status_unexpected_response">Unexpected response from PLC.</string>
+    <string name="generic_status_error">Error: %1$s</string>
+    <string name="ethernet_status_network_error">Network error. Check connection and IP.</string>
+    <string name="ethernet_status_fins_disabled">FINS functionality disabled.</string>
+    <string name="usb_status_connection_failed">USB connection failed.</string>
+
+    <!-- Loading Dock Screen -->
+    <string name="dock_config_shelter_title">Inflatable Shelter</string>
+    <string name="dock_config_platform_title">Platform</string>
+    <string name="dock_config_traffic_light_title">Traffic Light Sequence</string>
+
+    <string-array name="platform_types">
+        <item>None</item>
+        <item>P1</item>
+        <item>P2</item>
+        <item>P3</item>
+        <item>P4</item>
+    </string-array>
+
+    <string-array name="traffic_light_sequences">
+        <item>None</item>
+        <item>Vehicle detection</item>
+        <item>Detection with open door</item>
+        <item>Detection with open door and ramp</item>
+        <item>Detection with open and closed door</item>
+    </string-array>
+
+    <string-array name="traffic_light_sequence_descriptions">
+        <item>No sequence</item>
+        <item>Vehicle detection via detection or retention system.\n
+             Door unlocking and simultaneous interior and exterior traffic light change.</item>
+        <item>Vehicle detection via detection or retention system.\n
+             Door unlocking and exterior traffic light change with detection or retention\n
+             and interior with open door.</item>
+        <item>Vehicle detection via detection or retention system.\n
+             Door unlocking and exterior traffic light change with detection or retention\n
+             and interior with ramp in position.</item>
+        <item>Vehicle detection via detection or retention system.\n
+             Door unlocking and traffic light sequence:\n
+             exterior with detection or retention\n
+             and interior with open door.</item>
+    </string-array>
+
+    <!-- Support Screen -->
+    <string name="support_contact_title">Contact</string>
+    <string name="support_technical_title">Technical Support</string>
+    <string name="support_email_label">Email: %1$s</string>
+    <string name="support_phone_label">Phone: %1$s</string>
+    <string name="support_whatsapp_label">WhatsApp: %1$s</string>
+    <string name="support_whatsapp_button">Contact via WhatsApp</string>
+    <string name="support_no_email_app">No email application found.</string>
+    <string name="support_no_phone_app">No phone application found.</string>
+    <string name="support_no_whatsapp_app">WhatsApp application not found.</string>
+
+    <!-- Event Codes (must match event_descriptions order) -->
+    <integer-array name="event_codes">
+        <!-- 100-199: Shelter (6 events) -->
+        <item>100</item> <!-- SHELTER ACTIVATION -->
+        <item>101</item> <!-- SHELTER INFLATION START -->
+        <item>102</item> <!-- SHELTER DEFLATION START -->
+        <item>103</item> <!-- SHELTER INFLATED -->
+        <item>114</item> <!-- SHELTER MAINTENANCE START -->
+        <item>115</item> <!-- SHELTER MAINTENANCE END -->
+        <!-- 200-299: Door (11 events) -->
+        <item>200</item> <!-- DOOR ACTIVATION -->
+        <item>201</item> <!-- DOOR RISE START -->
+        <item>202</item> <!-- DOOR OPENING TIMEOUT -->
+        <item>203</item> <!-- DOOR OPEN -->
+        <item>204</item> <!-- DOOR LOWERING START -->
+        <item>205</item> <!-- DOOR CLOSING TIMEOUT -->
+        <item>206</item> <!-- DOOR CLOSED -->
+        <item>207</item> <!-- CABLE BREAKAGE FAILURE -->
+        <item>208</item> <!-- DRAG FTC FAILURE -->
+        <item>214</item> <!-- DOOR MAINTENANCE START -->
+        <item>215</item> <!-- DOOR MAINTENANCE END -->
+        <!-- 300-399: Platform (27 events) -->
+        <item>300</item> <!-- PLATFORM ACTIVATION -->
+        <item>301</item> <!-- P1 PLATFORM MODEL SELECTION -->
+        <item>302</item> <!-- P2 PLATFORM MODEL SELECTION -->
+        <item>303</item> <!-- P3 PLATFORM MODEL SELECTION -->
+        <item>304</item> <!-- P4 PLATFORM MODEL SELECTION -->
+        <item>305</item> <!-- P1 RISE START -->
+        <item>306</item> <!-- P2 RISE START -->
+        <item>307</item> <!-- P2 CLAW EXTENSION START -->
+        <item>308</item> <!-- P2 CLAW RETRACTION START -->
+        <item>309</item> <!-- P3 LOWERING START -->
+        <item>310</item> <!-- P3 RISE START -->
+        <item>311</item> <!-- P4 RISE START -->
+        <item>312</item> <!-- P4 LOWERING START -->
+        <item>313</item> <!-- P4 LIP LOWERING START -->
+        <item>314</item> <!-- P4 LIP RISE START -->
+        <item>315</item> <!-- P1-P2 RISE TIMEOUT -->
+        <item>316</item> <!-- P3 RISE TIMEOUT -->
+        <item>317</item> <!-- P3 LOWERING TIMEOUT -->
+        <item>318</item> <!-- P4 RISE TIMEOUT -->
+        <item>319</item> <!-- P4 LOWERING TIMEOUT -->
+        <item>320</item> <!-- P4 STOP UP -->
+        <item>321</item> <!-- P4 STOP MIDDLE -->
+        <item>322</item> <!-- P4 STOP DOWN -->
+        <item>323</item> <!-- P4 UP INTERLOCK OPENING -->
+        <item>324</item> <!-- P4 DOWN INTERLOCK OPENING -->
+        <item>330</item> <!-- PLATFORM MAINTENANCE START -->
+        <item>331</item> <!-- PLATFORM MAINTENANCE END -->
+        <!-- 400-499: Traffic Lights (5 events) -->
+        <item>400</item> <!-- TRAFFIC LIGHTS ACTIVATION -->
+        <item>401</item> <!-- TRAFFIC LIGHTS MODE 1 SELECTION -->
+        <item>402</item> <!-- TRAFFIC LIGHTS MODE 2 SELECTION -->
+        <item>403</item> <!-- TRAFFIC LIGHTS MODE 3 SELECTION -->
+        <item>404</item> <!-- TRAFFIC LIGHTS MODE 4 SELECTION -->
+        <!-- 900-999: System (9 events) -->
+        <item>900</item> <!-- SYSTEM START -->
+        <item>901</item> <!-- SYSTEM STOP -->
+        <item>902</item> <!-- RTC BATTERY CHANGE -->
+        <item>903</item> <!-- SYSTEM OK -->
+        <item>904</item> <!-- ETHERNET CONNECTION -->
+        <item>905</item> <!-- EMERGENCIES ACTIVATED -->
+        <item>906</item> <!-- EMERGENCIES DEACTIVATED -->
+        <item>907</item> <!-- VEHICLE DETECTION STARTED -->
+        <item>908</item> <!-- VEHICLE DETECTION ENDED -->
+    </integer-array>
+
+    <!-- Event Descriptions for Activity Log -->
+    <string-array name="event_descriptions">
+        <!-- 100-199: Shelter -->
+        <item>SHELTER ACTIVATION</item> <!-- 100 -->
+        <item>SHELTER INFLATION START</item> <!-- 101 -->
+        <item>SHELTER DEFLATION START</item> <!-- 102 -->
+        <item>SHELTER INFLATED</item> <!-- 103 -->
+        <item>SHELTER MAINTENANCE START</item> <!-- 114 -->
+        <item>SHELTER MAINTENANCE END</item> <!-- 115 -->
+        <!-- 200-299: Door -->
+        <item>DOOR ACTIVATION</item> <!-- 200 -->
+        <item>DOOR RISE START</item> <!-- 201 -->
+        <item>DOOR OPENING TIMEOUT</item> <!-- 202 -->
+        <item>DOOR OPEN</item> <!-- 203 -->
+        <item>DOOR LOWERING START</item> <!-- 204 -->
+        <item>DOOR CLOSING TIMEOUT</item> <!-- 205 -->
+        <item>DOOR CLOSED</item> <!-- 206 -->
+        <item>CABLE BREAKAGE FAILURE</item> <!-- 207 -->
+        <item>DRAG FTC FAILURE</item> <!-- 208 -->
+        <item>DOOR MAINTENANCE START</item> <!-- 214 -->
+        <item>DOOR MAINTENANCE END</item> <!-- 215 -->
+        <!-- 300-399: Platform -->
+        <item>PLATFORM ACTIVATION</item> <!-- 300 -->
+        <item>P1 PLATFORM MODEL SELECTION</item> <!-- 301 -->
+        <item>P2 PLATFORM MODEL SELECTION</item> <!-- 302 -->
+        <item>P3 PLATFORM MODEL SELECTION</item> <!-- 303 -->
+        <item>P4 PLATFORM MODEL SELECTION</item> <!-- 304 -->
+        <item>P1 RISE START</item> <!-- 305 -->
+        <item>P2 RISE START</item> <!-- 306 -->
+        <item>P2 CLAW EXTENSION START</item> <!-- 307 -->
+        <item>P2 CLAW RETRACTION START</item> <!-- 308 -->
+        <item>P3 LOWERING START</item> <!-- 309 -->
+        <item>P3 RISE START</item> <!-- 310 -->
+        <item>P4 RISE START</item> <!-- 311 -->
+        <item>P4 LOWERING START</item> <!-- 312 -->
+        <item>P4 LIP LOWERING START</item> <!-- 313 -->
+        <item>P4 LIP RISE START</item> <!-- 314 -->
+        <item>P1-P2 RISE TIMEOUT</item> <!-- 315 -->
+        <item>P3 RISE TIMEOUT</item> <!-- 316 -->
+        <item>P3 LOWERING TIMEOUT</item> <!-- 317 -->
+        <item>P4 RISE TIMEOUT</item> <!-- 318 -->
+        <item>P4 LOWERING TIMEOUT</item> <!-- 319 -->
+        <item>P4 STOP UP</item> <!-- 320 -->
+        <item>P4 STOP MIDDLE</item> <!-- 321 -->
+        <item>P4 STOP DOWN</item> <!-- 322 -->
+        <item>P4 UP INTERLOCK OPENING</item> <!-- 323 -->
+        <item>P4 DOWN INTERLOCK OPENING</item> <!-- 324 -->
+        <item>PLATFORM MAINTENANCE START</item> <!-- 330 -->
+        <item>PLATFORM MAINTENANCE END</item> <!-- 331 -->
+        <!-- 400-499: Traffic Lights -->
+        <item>TRAFFIC LIGHTS ACTIVATION</item> <!-- 400 -->
+        <item>TRAFFIC LIGHTS MODE 1 SELECTION</item> <!-- 401 -->
+        <item>TRAFFIC LIGHTS MODE 2 SELECTION</item> <!-- 402 -->
+        <item>TRAFFIC LIGHTS MODE 3 SELECTION</item> <!-- 403 -->
+        <item>TRAFFIC LIGHTS MODE 4 SELECTION</item> <!-- 404 -->
+        <!-- 900-999: System -->
+        <item>SYSTEM START</item> <!-- 900 -->
+        <item>SYSTEM STOP</item> <!-- 901 -->
+        <item>RTC BATTERY CHANGE</item> <!-- 902 -->
+        <item>SYSTEM OK</item> <!-- 903 -->
+        <item>ETHERNET CONNECTION</item> <!-- 904 -->
+        <item>EMERGENCIES ACTIVATED</item> <!-- 905 -->
+        <item>EMERGENCIES DEACTIVATED</item> <!-- 906 -->
+        <item>VEHICLE DETECTION STARTED</item> <!-- 907 -->
+        <item>VEHICLE DETECTION ENDED</item> <!-- 908 -->
+    </string-array>
+
+    <!-- Language Selection -->
+    <string name="language_selector_title">Language / Idioma / Langue</string>
+    <string name="language_spanish">Español</string>
+    <string name="language_english">English</string>
+    <string name="language_french">Français</string>
+    <string name="language_restart_required">Language changed. Please restart the application.</string>
+
+</resources>

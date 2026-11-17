@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ INK OMRON Viewer - Monitorización y control de muelles de carga.
+  ~ Copyright (C) 2026 X. Rodriguez <xarosu@gmail.com>
+  ~
+  ~ Este programa es software libre: puedes redistribuirlo y/o modificarlo
+  ~ bajo los términos de la Licencia Pública General GNU publicada por la
+  ~ Free Software Foundation, ya sea la versión 3 de la Licencia, o
+  ~ cualquier versión posterior.
+  ~
+  ~ Este programa se distribuye con la esperanza de que sea útil, pero
+  ~ SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita de
+  ~ MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO DETERMINADO.
+  ~ Consulte la Licencia Pública General GNU para más detalles.
+  ~
+  ~ Debería haber recibido una copia de la Licencia Pública General GNU
+  ~ junto con este programa. Si no es así, consulte <https://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<resources>
+    <!--
+    This file specifies the USB devices that this application can handle.
+    When a device with a matching Vendor ID (VID) and Product ID (PID) is connected,
+    Android will offer to open this app.
+
+    You can find the VID and PID of your USB device using tools on your computer
+    (e.g., Device Manager on Windows, lsusb on Linux) or with third-party Android apps.
+    The values must be in decimal format.
+    -->
+
+    <!-- Omron USB device (original) -->
+    <usb-device vendor-id="1424" product-id="91" />
+
+    <!-- TP-Link UE300C USB-C to Ethernet Adapter -->
+    <usb-device vendor-id="2357" product-id="1537" />
+
+    <!-- Common USB-to-Serial Adapter Chips -->
+    <!-- FTDI -->
+    <usb-device vendor-id="1027" />
+    <!-- Prolific -->
+    <usb-device vendor-id="1659" />
+    <!-- Silicon Labs -->
+    <usb-device vendor-id="4292" />
+    <!-- CH340 -->
+    <usb-device vendor-id="6790" />
+
+    <!-- ESP32 Development Boards (common CP2102/CP2104 chip) -->
+    <usb-device vendor-id="4292" product-id="60000" />
+    <!-- ESP32 with CH340 -->
+    <usb-device vendor-id="6790" product-id="29987" />
+    <!-- ESP32 with FTDI -->
+    <usb-device vendor-id="1027" product-id="24577" />
+
+</resources>
